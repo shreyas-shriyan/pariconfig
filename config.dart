@@ -29,9 +29,8 @@ const ProductVariantLayout = {
   "height": "option",
 };
 
-
 /// This option is determine hide some components for web
-var kWebHidden = true;
+var kLayoutWeb = true;
 
 const kAdvanceConfig = {
   "DefaultLanguage": "en",
@@ -53,21 +52,21 @@ const kAdvanceConfig = {
   "DefaultCountryISOCode": "IN",
   "EnableRating": true,
   "EnableSmartChat": true,
-  "hideOutOfStock": true,
-  'allowSearchingAddress': true,
-  "isCaching": false,
+  "hideOutOfStock": false,
+  'allowSearchingAddress': false,
+  "isCaching": true,
   "OnBoardOnlyShowFirstTime": true,
   "EnableConfigurableProduct": false, //for magento
   "EnableAttributesConfigurableProduct": ["color", "size"], //for magento
   "EnableAttributesLabelConfigurableProduct": ["color", "size"], //for magento,
-  "EnableAdvertisement": true,
-  "Currencies": [
-    {
-      "symbol": "\₹",
-      "decimalDigits": 2,
-      "symbolBeforeTheNumber": true,
-      "currency": "IND"
-    }
+  "EnableAdvertisement": false,
+  "Currencies":[
+  {
+    "symbol": "\₹",
+    "decimalDigits": 2,
+    "symbolBeforeTheNumber": true,
+    "currency": "INR"
+  }
   ]
 };
 
@@ -99,10 +98,7 @@ const kProductDetail = {
 
 /// config for the chat app
 const smartChat = [
-  {
-    'app': 'whatsapp://send?phone=+918497890956',
-    'iconData': FontAwesomeIcons.whatsapp
-  },
+  {'app': 'whatsapp://send?phone=+918497890956', 'iconData': FontAwesomeIcons.whatsapp},
   {'app': 'tel:8497890956', 'iconData': FontAwesomeIcons.phone},
   {'app': 'sms://8497890956', 'iconData': FontAwesomeIcons.sms}
 ];
@@ -113,14 +109,13 @@ List onBoardingData = [
   {
     "title": "Welcome to Pari Florist",
     "image": "assets/images/parintrocrop.png",
-    "desc": "Pari is on the way to serve you. "
+    "desc": "PariFlorist is on the way to serve you. "
   },
   {
-    "title": "We are delivering..",
+    "title": "We currently deliver to..",
     "image": "assets/images/availcity.png",
-    "desc":
-        "We only deliver to these cities."
-            "Any orders from other cities will not be accepted."
+    "desc": "We only deliver to these cities. "
+        "Any other cities will not be accepted."
   },
   {
     "title": "Let's Get Started",
@@ -130,10 +125,8 @@ List onBoardingData = [
 ];
 
 const PaypalConfig = {
-  "clientId":
-      "ASlpjFreiGp3gggRKo6YzXMyGM6-NwndBAQ707k6z3-WkSSMTPDfEFmNmky6dBX00lik8wKdToWiJj5w",
-  "secret":
-      "ECbFREri7NFj64FI_9WzS6A0Az2DqNLrVokBo0ZBu4enHZKMKOvX45v9Y1NBPKFr6QJv2KaSp5vk5A1G",
+  "clientId": "ASlpjFreiGp3gggRKo6YzXMyGM6-NwndBAQ707k6z3-WkSSMTPDfEFmNmky6dBX00lik8wKdToWiJj5w",
+  "secret": "ECbFREri7NFj64FI_9WzS6A0Az2DqNLrVokBo0ZBu4enHZKMKOvX45v9Y1NBPKFr6QJv2KaSp5vk5A1G",
   "production": false,
   "paymentMethodId": "paypal",
   "enabled": false,
@@ -156,12 +149,13 @@ const TapConfig = {
 
 // Limit the country list from Billing Address
 const List DefaultCountry = [
-  {
+{
     "name": "India",
     "iosCode": "IN",
     "icon":
         "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
-  }];
+  }
+];
 //const List DefaultCountry = [
 //  {
 //    "name": "Vietnam",
@@ -199,3 +193,11 @@ const kAdConfig = {
   "waitingTimeToDisplayInterstitial": 10,
   "waitingTimeToDisplayReward": 10,
 };
+
+const kLanguages = [
+  {
+    "icon": 'assets/images/country/gb.png',
+    "text": 'English',
+    "code": "en",
+  }
+];

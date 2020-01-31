@@ -52,14 +52,6 @@
             "#43506A",
             "#43506A"
           ]
-        },
-        {
-          "category": 210,
-          "image": "assets/icons/categories/ic_panties.png",
-          "colors": [
-            "#12B58C",
-            "#12B58C"
-          ]
         }
       ]
     },
@@ -92,6 +84,10 @@
       "isSnapping": true
     },
     {
+      "name": "Our Blog Posts",
+      "layout": "blog"
+    },
+    {
       "name": "New Collections",
       "layout": "staggered",
       "limit": 20,
@@ -117,7 +113,8 @@
     {
       "layout": "search",
       "label": "Search",
-      "icon": "assets/icons/tabs/icon-search.png"
+      "icon": "assets/icons/tabs/icon-search.png",
+      "size": 24
     },
     {
       "layout": "cart",
